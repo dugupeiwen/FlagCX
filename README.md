@@ -71,7 +71,7 @@ FlagCX also integrates with upper-layer applications such as PyTorch and PaddleP
 2. Build the library with different flags targeting to different platforms:
     ```sh
     cd FlagCX
-    make [USE_NVIDIA/USE_ILUVATAR_COREX/USE_CAMBRICON/USE_GLOO/USE_METAX]=1
+    make [USE_NVIDIA/USE_ILUVATAR_COREX/USE_CAMBRICON/USE_GLOO/USE_METAX/USE_DU]=1
     ```
     The default install path is set to `build/`, you can manually set `BUILDDIR` to specify the build path. You may also define `DEVICE_HOME` and `CCL_HOME` to indicate the install paths of device runtime and communication libraries.
 
@@ -80,7 +80,7 @@ FlagCX also integrates with upper-layer applications such as PyTorch and PaddleP
 Tests for FlagCX are maintained in `test/perf`.
 ```sh
 cd test/perf
-make [USE_NVIDIA/USE_ILUVATAR_COREX/USE_CAMBRICON/USE_METAX]=1
+make [USE_NVIDIA/USE_ILUVATAR_COREX/USE_CAMBRICON/USE_METAX/USE_DU]=1
 ./test_allreduce -b 128M -e 8G -f 2
 ```
 Note that the default MPI install path is set to `/usr/local/mpi`, you may specify the MPI path with:
